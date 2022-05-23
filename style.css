@@ -42,6 +42,16 @@ li a{
     border-radius: 30px;
     background-color: var(--lilla);
 }
+
+.card{
+    width: 100%;
+    background-color: var(--azzurrino);
+    border-radius: 20px;
+    padding: 30px 30px 0 30px;
+}
+
+
+
 /* HEADER */
 header{
     background-color: var(--blu);
@@ -49,6 +59,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 .logo{
@@ -83,7 +94,14 @@ header li a{
     cursor: pointer;
 }
 
+
+
+
+
 /* MAIN */
+
+
+
 
 /* section: info */
 
@@ -94,12 +112,6 @@ header li a{
     row-gap: 30px;
 }
 
-.info .card{
-    width: 100%;
-    background-color: var(--azzurrino);
-    border-radius: 20px;
-    padding: 30px 30px 0 30px;
-}
 .card h1{
     color: var(--blu);
     font-size: 30px;
@@ -136,6 +148,72 @@ header li a{
     color: var(--blu);
     margin-bottom: 25px;
 }
+
+
+
+
+/* section: plan */
+
+.plan{
+    background-color: var(--lilla);
+    padding: 15px 15px 50px 15px;
+}
+
+.planning{
+    margin-bottom: 50px;
+}
+
+.planning img{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.planning h1{
+    color: white;
+    font-size: 40px;
+    margin: 50px 0;
+}
+
+.text-plan{
+    color: white;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.development{
+    background-color: white;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.development img{
+    width: 100%;
+}
+.development h2{
+    margin: 30px 0;
+}
+.development-text{
+   font-style: italic;
+   font-weight: bold; 
+   margin-bottom: 30px;
+}
+
+.arrow-container{
+    width: 50px;
+    height: 50px;
+}
+.button-arrow{
+    padding: 20px 28px;
+    background-color: var(--lilla);
+    font-size: 30px;
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
 
 
 
@@ -177,11 +255,6 @@ header li a{
         max-width: 950px;
         margin: 0 auto;
     }
-
-    section{
-        max-width: 950px;
-        margin: 0 auto;
-    }
     
     header nav{
         display: block;
@@ -190,10 +263,23 @@ header li a{
     .ham{
         display: none;
     }
+
+
+
+
+
+
     
     /* MAIN */
    
+
+
     /* section: info */
+    .info{
+        max-width: 950px;
+        margin: 0 auto;
+    }
+
     .info .big-card{
         display: flex;
     }
@@ -222,6 +308,27 @@ header li a{
     .app-store{
         font-size: 12px;
     }
+
+
+
+    /* section: plan */
+    .plan-container{
+        max-width: 850px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .plan-item{
+        width: calc(100% / 2 - 20px);
+    }
+
+    .development{
+        position: relative;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
 }
 
 @media all and (min-width: 1200px){
@@ -230,7 +337,16 @@ header li a{
         margin: 0 auto;
     }
 
-    section{
+
+
+
+
+    /* MAIN */
+
+
+
+    /* section: info */
+    .info{
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -248,5 +364,12 @@ header li a{
     }
     .app-store{
         font-size: 20px;
+    }
+
+
+
+    /* section: plan */
+    .plan-container{
+        max-width: 950px;
     }
 }
